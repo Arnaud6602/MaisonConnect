@@ -14,112 +14,82 @@
   --bg3:#2c5364;
   --card:#151922;
   --accent:#4fd1c5;
-  --accent2:#38b2ac;
   --text:#ffffff;
   --muted:#b5b5b5;
 }
-
 *{box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial}
-
 body{
-margin:0;
-background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
-color:var(--text);
+  margin:0;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+  color:var(--text);
 }
-
 .container{
-max-width:1100px;
-margin:auto;
-padding:25px 15px 80px;
+  max-width:1100px;
+  margin:auto;
+  padding:25px 15px 80px;
 }
-
 header{text-align:center;margin-bottom:35px}
 h1{margin:0;font-size:2.4rem}
 .subtitle{color:var(--muted);margin-top:8px}
-
 .section{margin-top:40px}
 .packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-
 .card{
-background:var(--card);
-border-radius:18px;
-padding:22px;
-box-shadow:0 10px 25px rgba(0,0,0,.4);
+  background:var(--card);
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
-
-.line{
-width:60px;
-height:4px;
-background:linear-gradient(90deg,var(--accent),var(--accent2));
-border-radius:5px;
-margin:6px 0 14px 0;
-}
-
 .price{
-font-size:2.1rem;
-color:var(--accent);
-margin:8px 0;
+  font-size:2.1rem;
+  color:var(--accent);
+  margin:8px 0;
 }
-
 ul{padding-left:18px;line-height:1.6}
-
 .option{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin:10px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:10px 0;
 }
-
 .counter{
-display:flex;
-gap:8px;
-align-items:center;
+  display:flex;
+  gap:8px;
+  align-items:center;
 }
-
 .counter button{
-width:36px;
-height:36px;
-border-radius:50%;
-border:none;
-font-size:20px;
-font-weight:700;
-background:linear-gradient(135deg,var(--accent),var(--accent2));
-cursor:pointer;
-color:#000;
+  width:32px;
+  height:32px;
+  border-radius:8px;
+  border:none;
+  font-size:18px;
+  background:var(--accent);
+  cursor:pointer;
 }
-
 .counter span{
-min-width:28px;
-text-align:center;
-font-size:1.05rem;
+  min-width:25px;
+  text-align:center;
 }
-
 .total{
-margin-top:18px;
-font-size:1.4rem;
-text-align:center;
-font-weight:700;
+  margin-top:20px;
+  font-size:1.4rem;
+  text-align:center;
 }
-
 .btn{
-display:block;
-width:100%;
-margin-top:18px;
-padding:16px 0;
-border-radius:14px;
-border:none;
-background:linear-gradient(135deg,var(--accent),var(--accent2));
-font-size:1.1rem;
-font-weight:700;
-cursor:pointer;
-color:#000;
+  display:block;
+  margin-top:15px;
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  background:var(--accent);
+  font-size:1.05rem;
+  font-weight:600;
+  cursor:pointer;
 }
-
-footer{
-margin-top:60px;
-text-align:center;
-color:var(--muted);
-font-size:.9rem;
+.footer{
+  margin-top:60px;
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
 }
 </style>
 </head>
@@ -134,19 +104,17 @@ font-size:.9rem;
 
 <section class="section">
 <h2>Nos Packs Domotique</h2>
-
 <div class="packs">
 
+<!-- Pack Essentiel -->
 <div class="card">
 <h3>Pack Volet Essentiel</h3>
-<div class="line"></div>
 <div class="price">89 €</div>
-
 <ul>
 <li>1 module volet connecté Tuya</li>
 <li>Installation complète</li>
 <li>Application mobile</li>
-<li>Scénarios automatiques</li>
+<li>• Automatisations soleil & horaires</li>
 </ul>
 
 <div class="option">
@@ -177,20 +145,18 @@ font-size:.9rem;
 </div>
 
 <div class="total">Total : <span id="tot1">89</span> €</div>
-
 <button class="btn" onclick="pdf('Pack Volet Essentiel',89,'v1','l1','t1','tot1')">Télécharger devis PDF</button>
 </div>
 
+<!-- Pack Confort -->
 <div class="card">
 <h3>Pack Volets Confort</h3>
-<div class="line"></div>
 <div class="price">229 €</div>
-
 <ul>
 <li>3 modules volets</li>
 <li>Installation complète</li>
-<li>Automatisations soleil & horaires</li>
 <li>Application mobile</li>
+<li>• Automatisations soleil & horaires</li>
 </ul>
 
 <div class="option">
@@ -221,20 +187,18 @@ font-size:.9rem;
 </div>
 
 <div class="total">Total : <span id="tot2">229</span> €</div>
-
 <button class="btn" onclick="pdf('Pack Volets Confort',229,'v2','l2','t2','tot2')">Télécharger devis PDF</button>
 </div>
 
+<!-- Pack Maison Connectée -->
 <div class="card">
 <h3>Pack Maison Connectée</h3>
-<div class="line"></div>
 <div class="price">349 €</div>
-
 <ul>
 <li>3 modules lumière</li>
 <li>2 modules volets</li>
-<li>Automatisations complètes</li>
 <li>Application mobile</li>
+<li>• Automatisations soleil & horaires</li>
 </ul>
 
 <div class="option">
@@ -265,14 +229,13 @@ font-size:.9rem;
 </div>
 
 <div class="total">Total : <span id="tot3">349</span> €</div>
-
 <button class="btn" onclick="pdf('Pack Maison Connectée',349,'v3','l3','t3','tot3')">Télécharger devis PDF</button>
 </div>
 
 </div>
 </section>
 
-<footer>
+<footer class="footer">
 ✔ Compatible Tuya – Google Home – Alexa<br>
 ✔ Aucun abonnement – 100 % local<br><br>
 Contact : contact@maisonconnect.fr – 06 49 08 08 00<br>
@@ -282,46 +245,64 @@ Contact : contact@maisonconnect.fr – 06 49 08 08 00<br>
 </div>
 
 <script>
+const prix={v:70,l:60,t:149};
+
 function chg(id,val){
-let el=document.getElementById(id)
-let v=parseInt(el.innerText)+val
-if(v<0) v=0
-el.innerText=v
-calc()
+  let el=document.getElementById(id);
+  let v=parseInt(el.innerText)+val;
+  if(v<0) v=0;
+  el.innerText=v;
+  calc();
 }
 
 function calc(){
-document.getElementById('tot1').innerText=89+v('v1')*70+v('l1')*60+v('t1')*149
-document.getElementById('tot2').innerText=229+v('v2')*70+v('l2')*60+v('t2')*149
-document.getElementById('tot3').innerText=349+v('v3')*70+v('l3')*60+v('t3')*149
+  document.getElementById('tot1').innerText=89+v('v1')*prix.v+v('l1')*prix.l+v('t1')*prix.t;
+  document.getElementById('tot2').innerText=229+v('v2')*prix.v+v('l2')*prix.l+v('t2')*prix.t;
+  document.getElementById('tot3').innerText=349+v('v3')*prix.v+v('l3')*prix.l+v('t3')*prix.t;
 }
 
 function v(id){return parseInt(document.getElementById(id).innerText)}
 
 async function pdf(pack,base,vId,lId,tId,totId){
-const {jsPDF}=window.jspdf
-let d=new jsPDF()
-let y=20
+  const {jsPDF}=window.jspdf;
+  let d=new jsPDF();
+  let y=20;
 
-d.setFontSize(16)
-d.text("MaisonConnect – Devis Domotique",20,y)
-y+=14
+  d.setFontSize(16);
+  d.text("MaisonConnect – Devis Domotique et Modules Connectés",20,y);
+  y+=15;
 
-d.setFontSize(12)
-d.text("Pack : "+pack,20,y); y+=8
-d.text("Base : "+base+" €",20,y); y+=10
+  d.setFontSize(12);
+  d.text("Pack sélectionné : "+pack,20,y);
+  y+=10;
+  d.text("Base : "+base+" €",20,y);
+  y+=10;
 
-let vq=v(vId),lq=v(lId),tq=v(tId)
+  let vq=v(vId), lq=v(lId), tq=v(tId);
+  if(vq>0){ d.text("Modules volet x"+vq+" : "+(vq*prix.v)+" €",20,y); y+=8; }
+  if(lq>0){ d.text("Modules lumière x"+lq+" : "+(lq*prix.l)+" €",20,y); y+=8; }
+  if(tq>0){ d.text("Tablette murale premium x"+tq+" : "+(tq*prix.t)+" €",20,y); y+=8; }
 
-if(vq>0){d.text("Modules volet x"+vq+" : "+(vq*70)+" €",20,y);y+=8}
-if(lq>0){d.text("Modules lumière x"+lq+" : "+(lq*60)+" €",20,y);y+=8}
-if(tq>0){d.text("Tablette murale premium x"+tq+" : "+(tq*149)+" €",20,y);y+=8}
+  y+=8;
+  d.setFontSize(14);
+  d.text("• Automatisations soleil & horaires",20,y);
+  y+=10;
 
-y+=8
-d.setFontSize(14)
-d.text("TOTAL : "+document.getElementById(totId).innerText+" €",20,y)
+  d.text("TOTAL : "+document.getElementById(totId).innerText+" €",20,y);
+  y+=12;
 
-d.save("devis_maisonconnect.pdf")
+  d.setFontSize(10);
+  d.text("✔ Compatible Tuya – Google Home – Alexa",20,y);
+  y+=6;
+  d.text("✔ Aucun abonnement – 100 % local",20,y);
+  y+=6;
+  d.text("✔ Connexion Wi-Fi obligatoire dans le logement",20,y);
+  y+=8;
+  d.text("Contact : contact@maisonconnect.fr – 06 49 08 08 00",20,y);
+  y+=6;
+  d.text("© MaisonConnect – Domotique & automatisation habitat",20,y);
+
+  d.save("devis_maisonconnect.pdf");
 }
 </script>
 
