@@ -114,7 +114,7 @@ ul{padding-left:18px;line-height:1.6}
 <li>1 module volet connecté Tuya</li>
 <li>Installation complète</li>
 <li>Application mobile</li>
-<li>• Automatisations soleil & horaires</li>
+<li>• Automatisations complètes</li>
 </ul>
 
 <div class="option">
@@ -156,7 +156,7 @@ ul{padding-left:18px;line-height:1.6}
 <li>3 modules volets</li>
 <li>Installation complète</li>
 <li>Application mobile</li>
-<li>• Automatisations soleil & horaires</li>
+<li>• Automatisations complètes</li>
 </ul>
 
 <div class="option">
@@ -198,7 +198,7 @@ ul{padding-left:18px;line-height:1.6}
 <li>3 modules lumière</li>
 <li>2 modules volets</li>
 <li>Application mobile</li>
-<li>• Automatisations soleil & horaires</li>
+<li>• Automatisations complètes</li>
 </ul>
 
 <div class="option">
@@ -285,21 +285,18 @@ async function pdf(pack,base,vId,lId,tId,totId){
 
   y+=8;
   d.setFontSize(14);
-  d.text("• Automatisations soleil & horaires",20,y);
+  d.text("• Automatisations complètes",20,y);
   y+=10;
 
   d.text("TOTAL : "+document.getElementById(totId).innerText+" €",20,y);
   y+=12;
 
   d.setFontSize(10);
-  d.text("✔ Compatible Tuya – Google Home – Alexa",20,y);
-  y+=6;
-  d.text("✔ Aucun abonnement – 100 % local",20,y);
-  y+=6;
-  d.text("✔ Connexion Wi-Fi obligatoire dans le logement",20,y);
-  y+=8;
-  d.text("Contact : contact@maisonconnect.fr – 06 49 08 08 00",20,y);
-  y+=6;
+  d.text("✔ Compatible Tuya – Google Home – Alexa",20,y); y+=6;
+  d.text("✔ Aucun abonnement – 100 % local",20,y); y+=6;
+  d.text("✔ Connexion Wi-Fi obligatoire dans le logement",20,y); y+=8;
+  d.text("Contact : contact@maisonconnect.fr – 06 49 08 08 00",20,y); y+=6;
+  d.text("Pour toute question ou installation personnalisée, contactez-nous !",20,y); y+=6;
   d.text("© MaisonConnect – Domotique & automatisation habitat",20,y);
 
   d.save("devis_maisonconnect.pdf");
