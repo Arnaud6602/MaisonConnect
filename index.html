@@ -1,365 +1,109 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MaisonConnect – Domotique intelligente</
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-<style>
-:root {
-  --bg1: #0f2027;
-  --bg2: #203a43;
-  --bg3: #2c5364;
-  --card: #151922;
-  --accent: #4fd1c5;
-  --accent2: #38b2ac;
-  --text: #ffffff;
-  --muted: #b5b5b5;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Arial, sans-serif;
-}
-
-body {
-  margin: 0;
-  background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
-  color: var(--text);
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 25px 15px 80px;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2.4rem;
-}
-
-.subtitle {
-  color: var(--muted);
-  margin-top: 8px;
-}
-
-.section {
-  margin-top: 40px;
-}
-
-.packs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: var(--card);
-  border-radius: 18px;
-  padding: 22px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
-}
-
-.price {
-  font-size: 2.1rem;
-  color: var(--accent);
-  margin: 8px 0;
-}
-
-ul {
-  padding-left: 18px;
-  line-height: 1.6;
-}
-
-.option {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.counter {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.counter button {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: none;
-  font-size: 20px;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  cursor: pointer;
-  color: #000;
-}
-
-.counter span {
-  min-width: 25px;
-  text-align: center;
-}
-
-.total {
-  margin-top: 20px;
-  font-size: 1.4rem;
-  text-align: center;
-  font-weight: 700;
-}
-
-.btn {
-  display: block;
-  width: 100%;
-  margin-top: 18px;
-  padding: 14px 0;
-  border-radius: 14px;
-  border: none;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  font-size: 1.05rem;
-  font-weight: 600;
-  cursor: pointer;
-  color: #000;
-}
-
-.contact-btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  padding: 14px 0;
-  border-radius: 14px;
-  border: none;
-  background: #ff7f50;
-  font-size: 1.05rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  color: #000;
-}
-
-.footer {
-  margin-top: 60px;
-  text-align: center;
-  color: var(--muted);
-  font-size: .9rem;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaisonConnecté - Domotique sans abonnement Lens/Harnes</title>
+    <link rel="stylesheet" href="style.css"> <!-- Assure-toi que le nom du fichier CSS est correct -->
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
+        header { background: #2c3e50; color: white; padding: 2rem; text-align: center; }
+        nav { background: #34495e; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .hero { padding: 40px 20px; text-align: center; background: #f4f7f6; }
+        .highlight { color: #27ae60; font-weight: bold; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around; margin-top: 30px; }
+        .card { background: white; border: 1px solid #ddd; padding: 20px; width: 300px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .btn { display: inline-block; background: #27ae60; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background: #f8f9fa; }
+        .check { color: #27ae60; font-weight: bold; }
+    </style>
 </head>
-
 <body>
+
+<header>
+    <h1>MaisonConnecté</h1>
+    <p>Votre expert domotique de proximité à <strong>Harnes, Lens et Pont-à-Vendin</strong></p>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="volets.html">Volets Connectés</a>
+    <a href="securite.html">Sécurité</a>
+    <a href="contact.html">Contact / Devis</a>
+</nav>
+
+<section class="hero">
+    <h2>La technologie au service de votre confort et sécurité</h2>
+    <p style="font-size: 1.2rem; max-width: 800px; margin: auto;">
+        Marre des mensualités infinies ? Je transforme votre habitat avec des solutions intelligentes, fiables et <span class="highlight">100% sans abonnement</span>. Déjà plus de 25 installations réussies dans le Bassin Minier !
+    </p>
+    <a href="contact.html" class="btn">Demander mon devis gratuit</a>
+</section>
+
 <div class="container">
-
-  <header>
-    <h1>MaisonConnect</h1>
-    <div class="subtitle">Domotique intelligente – Sans abonnement – Installation professionnelle</div>
-  </header>
-
-  <section class="section">
-    <h2>Nos Packs Domotique</h2>
-    <div class="packs">
-
-      <!-- Pack Essentiel -->
-      <div class="card">
-        <h3>Pack Volet Essentiel</h3>
-        <div class="price">89 €</div>
-        <ul>
-          <li>1 module volet connecté Tuya</li>
-          <li>Installation complète</li>
-          <li>Application mobile</li>
-          <li>• Automatisations complètes</li>
-        </ul>
-
-        <div class="option">
-          <span>Modules volet supplémentaires</span>
-          <div class="counter">
-            <button onclick="chg('v1',-1)">−</button>
-            <span id="v1">0</span>
-            <button onclick="chg('v1',1)">+</button>
-          </div>
+    <div class="services">
+        <div class="card">
+            <h3>🏠 Volets Connectés</h3>
+            <p>Installation d'interrupteurs tactiles intelligents. Contrôlez vos volets par smartphone ou à la voix.</p>
+            <p class="highlight">À partir de 89€ (Pose + Matériel inclus)</p>
         </div>
-
-        <div class="option">
-          <span>Modules lumière</span>
-          <div class="counter">
-            <button onclick="chg('l1',-1)">−</button>
-            <span id="l1">0</span>
-            <button onclick="chg('l1',1)">+</button>
-          </div>
+        <div class="card">
+            <h3>🛡️ Sécurité Totale</h3>
+            <p>Caméras HD et capteurs d'ouverture. Recevez des alertes en temps réel sans payer de service de télésurveillance.</p>
         </div>
-
-        <div class="option">
-          <span>Tablette murale premium</span>
-          <div class="counter">
-            <button onclick="chg('t1',-1)">−</button>
-            <span id="t1">0</span>
-            <button onclick="chg('t1',1)">+</button>
-          </div>
+        <div class="card">
+            <h3>🤖 Automatisations</h3>
+            <p>Simulation de présence, fermeture automatique au coucher du soleil... Le confort total sur une seule application.</p>
         </div>
-
-        <div class="total">Total : <span id="tot1">89</span> €</div>
-        <button class="btn" onclick="pdf('Pack Volet Essentiel',89,'v1','l1','t1','tot1')">Télécharger devis PDF</button>
-      </div>
-
-      <!-- Pack Confort -->
-      <div class="card">
-        <h3>Pack Volets Confort</h3>
-        <div class="price">229 €</div>
-        <ul>
-          <li>3 modules volets</li>
-          <li>Installation complète</li>
-          <li>Application mobile</li>
-          <li>• Automatisations complètes</li>
-        </ul>
-
-        <div class="option">
-          <span>Modules volet supplémentaires</span>
-          <div class="counter">
-            <button onclick="chg('v2',-1)">−</button>
-            <span id="v2">0</span>
-            <button onclick="chg('v2',1)">+</button>
-          </div>
-        </div>
-
-        <div class="option">
-          <span>Modules lumière</span>
-          <div class="counter">
-            <button onclick="chg('l2',-1)">−</button>
-            <span id="l2">0</span>
-            <button onclick="chg('l2',1)">+</button>
-          </div>
-        </div>
-
-        <div class="option">
-          <span>Tablette murale premium</span>
-          <div class="counter">
-            <button onclick="chg('t2',-1)">−</button>
-            <span id="t2">0</span>
-            <button onclick="chg('t2',1)">+</button>
-          </div>
-        </div>
-
-        <div class="total">Total : <span id="tot2">229</span> €</div>
-        <button class="btn" onclick="pdf('Pack Volets Confort',229,'v2','l2','t2','tot2')">Télécharger devis PDF</button>
-      </div>
-
-      <!-- Pack Maison Connectée -->
-      <div class="card">
-        <h3>Pack Maison Connectée</h3>
-        <div class="price">349 €</div>
-        <ul>
-          <li>3 modules lumière</li>
-          <li>2 modules volets</li>
-          <li>Application mobile</li>
-          <li>• Automatisations complètes</li>
-        </ul>
-
-        <div class="option">
-          <span>Modules volet supplémentaires</span>
-          <div class="counter">
-            <button onclick="chg('v3',-1)">−</button>
-            <span id="v3">0</span>
-            <button onclick="chg('v3',1)">+</button>
-          </div>
-        </div>
-
-        <div class="option">
-          <span>Modules lumière</span>
-          <div class="counter">
-            <button onclick="chg('l3',-1)">−</button>
-            <span id="l3">0</span>
-            <button onclick="chg('l3',1)">+</button>
-          </div>
-        </div>
-
-        <div class="option">
-          <span>Tablette murale premium</span>
-          <div class="counter">
-            <button onclick="chg('t3',-1)">−</button>
-            <span id="t3">0</span>
-            <button onclick="chg('t3',1)">+</button>
-          </div>
-        </div>
-
-        <div class="total">Total : <span id="tot3">349</span> €</div>
-        <button class="btn" onclick="pdf('Pack Maison Connectée',349,'v3','l3','t3','tot3')">Télécharger devis PDF</button>
-      </div>
-
     </div>
-  </section>
 
-  <section class="section">
-    <a class="contact-btn" href="mailto:contact@maisonconnect.fr?subject=Demande%20de%20devis%20MaisonConnect">📩 Contacter pour un devis personnalisé</a>
-  </section>
+    <hr style="margin: 50px 0; border: 0; border-top: 1px solid #eee;">
 
-  <footer class="footer">
-    ✔ Compatible Tuya – Google Home – Alexa<br>
-    ✔ Aucun abonnement – 100 % local<br><br>
-    Contact : contact@maisonconnect.fr – 06 49 08 08 00<br>
-    © MaisonConnect – Domotique & automatisation habitat
-  </footer>
+    <h2 style="text-align: center;">Pourquoi payer un abonnement ?</h2>
+    <p style="text-align: center;">Comparez ma solution aux géants du marché :</p>
 
+    <table>
+        <thead>
+            <tr>
+                <th>Avantages</th>
+                <th style="color: #27ae60;">MaisonConnecté</th>
+                <th>Alarme Classique / Somfy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Coût Mensuel</strong></td>
+                <td class="check">0€ / mois</td>
+                <td>45€ à 60€ / mois</td>
+            </tr>
+            <tr>
+                <td><strong>Prix par volet</strong></td>
+                <td class="check">89€ (Matériel inclus)</td>
+                <td>250€ à 500€</td>
+            </tr>
+            <tr>
+                <td><strong>Propriété</strong></td>
+                <td class="check">Matériel à vous</td>
+                <td>Souvent en location</td>
+            </tr>
+            <tr>
+                <td><strong>Application unique</strong></td>
+                <td class="check">OUI (Tuya/Smart Life)</td>
+                <td>Souvent limité / fermé</td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="text-align: center; font-weight: bold; margin-top: 15px;">📊 Économisez plus de 3 000 € sur 5 ans.</p>
 </div>
 
-<script>
-function chg(id,val){
-  const el=document.getElementById(id);
-  let v=parseInt(el.innerText)+val;
-  if(v<0)v=0;
-  el.innerText=v;
-  calc();
-}
-
-function calc(){
-  document.getElementById('tot1').innerText=89 + v('v1')*70 + v('l1')*60 + v('t1')*149;
-  document.getElementById('tot2').innerText=229 + v('v2')*70 + v('l2')*60 + v('t2')*149;
-  document.getElementById('tot3').innerText=349 + v('v3')*70 + v('l3')*60 + v('t3')*149;
-}
-
-function v(id){return parseInt(document.getElementById(id).innerText);}
-
-async function pdf(pack,base,vId,lId,tId,totId){
-  const { jsPDF }=window.jspdf;
-  const doc=new jsPDF();
-  let y=20;
-
-  doc.setFontSize(16);
-  doc.text("MaisonConnect – Devis Domotique et Modules Connectés",20,y);
-  y+=14;
-
-  doc.setFontSize(12);
-  doc.text("Pack sélectionné : "+pack,20,y); y+=10;
-  doc.text("Prix de base : "+base+" €",20,y); y+=10;
-
-  let qv=v(vId),ql=v(lId),qt=v(tId);
-  if(qv>0){doc.text("Modules volet x"+qv+" : "+(qv*70)+" €",20,y); y+=8;}
-  if(ql>0){doc.text("Modules lumière x"+ql+" : "+(ql*60)+" €",20,y); y+=8;}
-  if(qt>0){doc.text("Tablette premium x"+qt+" : "+(qt*149)+" €",20,y); y+=8;}
-
-  y+=8;
-  doc.text("• Automatisations complètes",20,y); y+=12;
-  doc.setFontSize(14);
-  doc.text("TOTAL : "+document.getElementById(totId).innerText+" €",20,y); y+=14;
-
-  doc.setFontSize(10);
-  doc.text("Pour toute question ou installation personnalisée,",20,y); y+=6;
-  doc.text("contactez-nous : contact@maisonconnect.fr",20,y); y+=8;
-  doc.text("✔ Compatible Tuya – Google Home – Alexa",20,y); y+=6;
-  doc.text("✔ Aucun abonnement – 100 % local",20,y); y+=6;
-  doc.text("✔ Connexion Wi‑Fi obligatoire dans le logement",20,y); y+=6;
-  doc.text("© MaisonConnect – Domotique & automatisation habitat",20,y);
-
-  doc.save("devis_maisonconnect.pdf");
-}
-</script>
+<footer style="text-align: center; padding: 40px; background: #2c3e50; color: white; margin-top: 50px;">
+    <p>&copy; 2026 MaisonConnecté - Intervention sur Lens, Harnes, Sallaumines, Avion et environs.</p>
+    <p>Solutions basées sur l'écosystème Smart Life / Tuya</p>
+</footer>
 
 </body>
 </html>
